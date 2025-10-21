@@ -28,12 +28,107 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            components = new System.ComponentModel.Container();
+            ExitButton = new Button();
+            SoupButton = new Button();
+            ChefSpecialButton = new Button();
+            FishButton = new Button();
+            DinerNameLabel = new Label();
+            toolTip1 = new ToolTip(components);
+            DinerItemDisplay = new TextBox();
+            SuspendLayout();
+            // 
+            // ExitButton
+            // 
+            ExitButton.Font = new Font("Times New Roman", 10F);
+            ExitButton.Location = new Point(764, 393);
+            ExitButton.Name = "ExitButton";
+            ExitButton.Size = new Size(155, 68);
+            ExitButton.TabIndex = 0;
+            ExitButton.Text = "E&xit";
+            toolTip1.SetToolTip(ExitButton, "Closes The Program");
+            ExitButton.UseVisualStyleBackColor = true;
+            ExitButton.Click += this.ExitButton_Click;
+            // 
+            // SoupButton
+            // 
+            SoupButton.Font = new Font("Times New Roman", 10F);
+            SoupButton.Location = new Point(12, 393);
+            SoupButton.Name = "SoupButton";
+            SoupButton.Size = new Size(155, 68);
+            SoupButton.TabIndex = 0;
+            SoupButton.Text = "&Soup";
+            toolTip1.SetToolTip(SoupButton, "Displays The Soup Of The Day");
+            SoupButton.UseVisualStyleBackColor = true;
+            // 
+            // ChefSpecialButton
+            // 
+            ChefSpecialButton.Font = new Font("Times New Roman", 10F);
+            ChefSpecialButton.Location = new Point(173, 393);
+            ChefSpecialButton.Name = "ChefSpecialButton";
+            ChefSpecialButton.Size = new Size(155, 68);
+            ChefSpecialButton.TabIndex = 0;
+            ChefSpecialButton.Text = "&Chef's Special";
+            toolTip1.SetToolTip(ChefSpecialButton, "Displays The Chef's Special");
+            ChefSpecialButton.UseVisualStyleBackColor = true;
+            // 
+            // FishButton
+            // 
+            FishButton.Font = new Font("Times New Roman", 10F);
+            FishButton.Location = new Point(334, 393);
+            FishButton.Name = "FishButton";
+            FishButton.Size = new Size(155, 68);
+            FishButton.TabIndex = 0;
+            FishButton.Text = "&Fish";
+            toolTip1.SetToolTip(FishButton, "Displays The Fish Special");
+            FishButton.UseVisualStyleBackColor = true;
+            FishButton.Click += this.FishButton_Click;
+            // 
+            // DinerNameLabel
+            // 
+            DinerNameLabel.AutoSize = true;
+            DinerNameLabel.Font = new Font("Times New Roman", 20F);
+            DinerNameLabel.Location = new Point(379, 9);
+            DinerNameLabel.Name = "DinerNameLabel";
+            DinerNameLabel.Size = new Size(126, 39);
+            DinerNameLabel.TabIndex = 1;
+            DinerNameLabel.Text = "X Diner";
+            // 
+            // DinerItemDisplay
+            // 
+            DinerItemDisplay.Font = new Font("Times New Roman", 15F);
+            DinerItemDisplay.Location = new Point(215, 118);
+            DinerItemDisplay.MaximumSize = new Size(10000, 10000);
+            DinerItemDisplay.Name = "DinerItemDisplay";
+            DinerItemDisplay.Size = new Size(451, 36);
+            DinerItemDisplay.TabIndex = 2;
+            DinerItemDisplay.Text = "Test Strip";
+            // 
+            // DinerMenu
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(931, 482);
+            Controls.Add(DinerItemDisplay);
+            Controls.Add(DinerNameLabel);
+            Controls.Add(FishButton);
+            Controls.Add(ChefSpecialButton);
+            Controls.Add(SoupButton);
+            Controls.Add(ExitButton);
+            Name = "DinerMenu";
+            Text = "DinerMenu";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Button ExitButton;
+        private Button SoupButton;
+        private Button ChefSpecialButton;
+        private Button FishButton;
+        private Label DinerNameLabel;
+        private ToolTip toolTip1;
+        private TextBox DinerItemDisplay;
     }
 }
