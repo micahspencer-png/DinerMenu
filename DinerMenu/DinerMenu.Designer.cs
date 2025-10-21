@@ -35,7 +35,7 @@
             FishButton = new Button();
             DinerNameLabel = new Label();
             toolTip1 = new ToolTip(components);
-            DinerItemDisplay = new TextBox();
+            DisplayItemLabel = new Label();
             SuspendLayout();
             // 
             // ExitButton
@@ -48,7 +48,7 @@
             ExitButton.Text = "E&xit";
             toolTip1.SetToolTip(ExitButton, "Closes The Program");
             ExitButton.UseVisualStyleBackColor = true;
-            ExitButton.Click += this.ExitButton_Click;
+            ExitButton.Click += ExitButton_Click;
             // 
             // SoupButton
             // 
@@ -60,6 +60,7 @@
             SoupButton.Text = "&Soup";
             toolTip1.SetToolTip(SoupButton, "Displays The Soup Of The Day");
             SoupButton.UseVisualStyleBackColor = true;
+            SoupButton.Click += SoupButton_Click;
             // 
             // ChefSpecialButton
             // 
@@ -71,6 +72,7 @@
             ChefSpecialButton.Text = "&Chef's Special";
             toolTip1.SetToolTip(ChefSpecialButton, "Displays The Chef's Special");
             ChefSpecialButton.UseVisualStyleBackColor = true;
+            ChefSpecialButton.Click += ChefSpecialButton_Click;
             // 
             // FishButton
             // 
@@ -82,7 +84,7 @@
             FishButton.Text = "&Fish";
             toolTip1.SetToolTip(FishButton, "Displays The Fish Special");
             FishButton.UseVisualStyleBackColor = true;
-            FishButton.Click += this.FishButton_Click;
+            FishButton.Click += FishButton_Click;
             // 
             // DinerNameLabel
             // 
@@ -94,22 +96,21 @@
             DinerNameLabel.TabIndex = 1;
             DinerNameLabel.Text = "X Diner";
             // 
-            // DinerItemDisplay
+            // DisplayItemLabel
             // 
-            DinerItemDisplay.Font = new Font("Times New Roman", 15F);
-            DinerItemDisplay.Location = new Point(215, 118);
-            DinerItemDisplay.MaximumSize = new Size(10000, 10000);
-            DinerItemDisplay.Name = "DinerItemDisplay";
-            DinerItemDisplay.Size = new Size(451, 36);
-            DinerItemDisplay.TabIndex = 2;
-            DinerItemDisplay.Text = "Test Strip";
+            DisplayItemLabel.Font = new Font("Times New Roman", 15F);
+            DisplayItemLabel.Location = new Point(12, 48);
+            DisplayItemLabel.Name = "DisplayItemLabel";
+            DisplayItemLabel.Size = new Size(907, 342);
+            DisplayItemLabel.TabIndex = 2;
+            DisplayItemLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // DinerMenu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(931, 482);
-            Controls.Add(DinerItemDisplay);
+            Controls.Add(DisplayItemLabel);
             Controls.Add(DinerNameLabel);
             Controls.Add(FishButton);
             Controls.Add(ChefSpecialButton);
@@ -129,6 +130,6 @@
         private Button FishButton;
         private Label DinerNameLabel;
         private ToolTip toolTip1;
-        private TextBox DinerItemDisplay;
+        private Label DisplayItemLabel;
     }
 }
